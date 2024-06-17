@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is main page</h1>
+    <h2>Django Template Filters From Earthly Web</h2>
+
+    <h3><b>{{lst | join:' // '}}</b></h3>
+    <h3><b>{{date | date:'D d M Y'}}</b></h3>
+    <h3><b>{{date | date:"SHORT_DATE_FORMAT" }}</b></h3>
+    <h3><b>{{date | date}}</b></h3>
+    {% comment %} <h3><b>{{none | default: "nothing here" }}</b></h3> default is not working {% endcomment %}
+    <h3><b>{{value | add:'10' }}</b></h3>
+    <h3><b>{{name | capfirst }}</b></h3>
+    <h3><b>{{ name_lst | cut:" " }}</b></h3>
+    <h3><b>{{ stu | dictsort:"age" }}</b></h3>
+    <h3><b>{{ lst | first }}</b></h3>
+    <h3><b>{{ lst | last }}</b></h3>
+    <h3><b>length of {{name}} is {{ name | length }}</b></h3>
+    <h3><b>{{ name | linenumbers }}</b></h3>
+    <h3><b>{{ new_name | lower }}</b></h3>
+    <h3><b>{{ name | upper }}</b></h3>
+    <h3><b>{{ lst | random }}</b></h3>
+    <h3><b>{{ lst | slice:":2" }}</b></h3>
+    <h3><b>{{ date | time:"H\h i\m" }}</b></h3>
+    <h3><b> {{ date | timesince}} </b></h3>
+    <h3><b>{{ name | truncatechars:5 }}</b></h3>
+    <h3><b>{{ name_lst | wordcount }}</b></h3>
+    <h3><b>{{ name | make_list }}</b></h3>
+    <h3><b></b></h3>
+    <h3><b></b></h3>
+    <h3><b></b></h3>
+    <h3><b></b></h3>
+
+    <h2><a href="http://127.0.0.1:8000/">Home</a></h2>
+    <h2><a href="/first_app/home/">First_home</a></h2>
+    <h2><a href="/first_app/about/">About</a></h2>
+
+</body>
+</html>
